@@ -20,19 +20,23 @@ const social = [
   { title: "linkedin", link: "https://www.linkedin.com/in/axel-mu%C3%B1oz/" },
 ];
 
-const mail = "axelskam.098@gmail.com"
+const mail = "axelskam.098@gmail.com";
 
 export default function Home() {
   return (
     <>
-      <header className='animate__animated animate__fadeInDown'>
-        <Link href={"#home"}>
+      <header>
+        <Link className='animate__animated animate__fadeInDown' href={"#home"}>
           <h2>Newtyf</h2>
         </Link>
         <nav>
           <ol>
-            {menu.map((item) => (
-              <li key={item.title}>
+            {menu.map((item, index) => (
+              <li
+                className={`animate__animated`}
+                style={{animationDelay: `${(index+1)/2}s`}}
+                key={item.title}
+              >
                 <Link className='line' href={item.link}>
                   {item.title}
                 </Link>
@@ -96,7 +100,11 @@ export default function Home() {
       </div>
       <div className='animate__animated animate__fadeInUpBig social mail'>
         <ul className='social-list'>
-          <li className="text-reverse" ><a className="line" href={`mailto=${mail}`}>{mail}</a></li>
+          <li className='text-reverse'>
+            <a className='line' href={`mailto=${mail}`}>
+              {mail}
+            </a>
+          </li>
         </ul>
         <div className='social-line'></div>
       </div>
