@@ -15,6 +15,13 @@ const menu = [
   { title: "Contact", link: "#contact" },
 ];
 
+const social = [
+  { title: "github", link: "https://github.com/newtyf" },
+  { title: "linkedin", link: "https://www.linkedin.com/in/axel-mu%C3%B1oz/" },
+];
+
+const mail = "axelskam.098@gmail.com"
+
 export default function Home() {
   return (
     <>
@@ -26,7 +33,9 @@ export default function Home() {
           <ol>
             {menu.map((item) => (
               <li key={item.title}>
-                <Link className="line" href={item.link}>{item.title}</Link>
+                <Link className='line' href={item.link}>
+                  {item.title}
+                </Link>
               </li>
             ))}
           </ol>
@@ -34,7 +43,7 @@ export default function Home() {
       </header>
       <main>
         {/* FIRST SECTION */}
-        <div id="home" className='home'>
+        <div id='home' className='home'>
           <div id='particles-js'></div>
           <div className='home-content'>
             <div className='home-content__info'>
@@ -56,7 +65,7 @@ export default function Home() {
           </div>
         </div>
         {/* SECOND SECTION */}
-        <div id="about" className='about'>
+        <div id='about' className='about'>
           <h2>About</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
@@ -66,6 +75,31 @@ export default function Home() {
           </p>
         </div>
       </main>
+
+      {/* FIXED SOCIAL */}
+      <div className='social'>
+        <ul className='social-list'>
+          {social.map((item) => (
+            <li key={item.title}>
+              <a
+                title='social-link'
+                href={item.link}
+                className='icon'
+                target='_blank'
+              >
+                <i className={`bi bi-${item.title}`}></i>
+              </a>
+            </li>
+          ))}
+        </ul>
+        <div className='social-line'></div>
+      </div>
+      <div className='social mail'>
+        <ul className='social-list'>
+          <li className="text-reverse" ><a className="line" href={`mailto=${mail}`}>{mail}</a></li>
+        </ul>
+        <div className='social-line'></div>
+      </div>
     </>
   );
 }

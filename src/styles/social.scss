@@ -1,0 +1,39 @@
+.social {
+  position: fixed;
+  bottom: 0;
+  left: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &.mail {
+    left: auto;
+    right: 80px;
+  }
+
+  @include tablet {
+    display: none;
+  }
+  @include mobile {
+    display: none;
+  }
+  .social-list {
+    list-style: none;
+
+    li {
+      margin-bottom: 30px;
+
+      &.text-reverse {
+        font-family: "Finger Paint", cursive;
+        transform: rotate(-90deg);
+        margin-bottom: 130px;
+      }
+    }
+  }
+
+  .social-line {
+    width: 2px;
+    height: 109px;
+    background-color: #d9d9d9;
+  }
+}

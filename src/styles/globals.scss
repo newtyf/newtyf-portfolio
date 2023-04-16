@@ -42,6 +42,18 @@ a {
   &.active::before {
     transform: scaleX(1);
   }
+
+  &.icon {
+    font-size: 30px;
+    color: #D9D9D9;
+    transition: 300ms;
+    display: inline-block;
+
+    &:hover {
+      color: #ffffff;
+      transform: translateY(-10px)
+    }
+  }
 }
 
 .btn {
@@ -85,3 +97,4 @@ a {
 
 @import "./navbar.scss";
 @import "./home.scss";
+@import "./social.scss";
