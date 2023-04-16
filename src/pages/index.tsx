@@ -77,7 +77,7 @@ export default function Home() {
       </main>
 
       {/* FIXED SOCIAL */}
-      <div className='social'>
+      <div className='animate__animated animate__fadeInUpBig social'>
         <ul className='social-list'>
           {social.map((item) => (
             <li key={item.title}>
@@ -94,7 +94,7 @@ export default function Home() {
         </ul>
         <div className='social-line'></div>
       </div>
-      <div className='social mail'>
+      <div className='animate__animated animate__fadeInUpBig social mail'>
         <ul className='social-list'>
           <li className="text-reverse" ><a className="line" href={`mailto=${mail}`}>{mail}</a></li>
         </ul>
