@@ -7,10 +7,15 @@ header {
   padding: 50px;
   font-family: "Finger Paint", cursive;
   width: 100%;
+  height: 15vh;
+      z-index: 99;
+
 
   h2 {
     cursor: pointer;
+    position: relative;
     transition: all 300ms;
+    z-index: 99;
     &:hover {
       transform: rotate(-10deg)
     }
@@ -29,6 +34,11 @@ header {
       display: flex;
       flex-direction: row;
       justify-content: space-around;
+      li {
+        position: relative;
+      z-index: 99;
+
+      }
       @include mobile {
         display: none;
       }

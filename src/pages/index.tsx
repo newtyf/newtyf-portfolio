@@ -2,43 +2,68 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
+const menu = [
+  {
+    title: "About",
+    link: "#about",
+  },
+  {
+    title: "Work",
+    link: "#work",
+  },
+  { title: "Projects", link: "#projects" },
+  { title: "Contact", link: "#contact" },
+];
+
 export default function Home() {
   return (
     <>
       <header className='animate__animated animate__fadeInDown'>
-        <h2>Newtyf</h2>
+        <Link href={"#home"}>
+          <h2>Newtyf</h2>
+        </Link>
         <nav>
           <ol>
-            <li>
-              <Link className='active' href={"/"}>
-                About
-              </Link>
-            </li>
-            <li>
-              <Link href={"/"}>Work</Link>
-            </li>
-            <li>
-              <Link href={"/"}>Projects</Link>
-            </li>
-            <li>
-              <Link href={"/"}>Contact</Link>
-            </li>
+            {menu.map((item) => (
+              <li key={item.title}>
+                <Link className="line" href={item.link}>{item.title}</Link>
+              </li>
+            ))}
           </ol>
         </nav>
       </header>
       <main>
-        <div className='home'>
-          <h1 className='title-home animate__animated animate__fadeInDown'>
-            YoungFlex
-          </h1>
-          <p className='animate__animated animate__fadeInDown'>
-            {
-              "I'm a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I'm searching new projects to participate and create amazing digital experience."
-            }
+        {/* FIRST SECTION */}
+        <div id="home" className='home'>
+          <div id='particles-js'></div>
+          <div className='home-content'>
+            <div className='home-content__info'>
+              <h1 className='title-home animate__animated animate__fadeInDown'>
+                YoungFlex
+              </h1>
+              <p className='description animate__animated animate__fadeInDown'>
+                {
+                  "Soy un desarrollador FullStack especializado en la construccion de herramientas y experiencias digitales."
+                }
+              </p>
+              <a
+                className='animate__animated animate__fadeInDown btn'
+                href='mailto:axelskam.123@outlook.es'
+              >
+                Contact me!
+              </a>
+            </div>
+          </div>
+        </div>
+        {/* SECOND SECTION */}
+        <div id="about" className='about'>
+          <h2>About</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
+            necessitatibus quo consequatur ab quasi numquam qui ipsam, ipsa
+            ipsum possimus architecto totam in harum, reiciendis pariatur optio.
+            Dolorum, suscipit nesciunt.
           </p>
-          <button className='animate__animated animate__fadeInDown'>
-            Contact me!
-          </button>
         </div>
       </main>
     </>
