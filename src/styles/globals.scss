@@ -73,7 +73,7 @@ h2 {
 }
 
 a {
-  color: #ffffff;
+  color: var(--white-color);
   position: relative;
   text-decoration: none;
 
@@ -85,7 +85,7 @@ a {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #ffffff;
+    background-color: var(--white-color);
     transform: scaleX(0);
     transform-origin: top left;
     transition: transform 0.3s ease;
