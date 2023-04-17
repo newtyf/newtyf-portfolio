@@ -13,18 +13,17 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    -webkit-user-select: none;
+    user-select: none;
+
 
     .home-content__info {
-      width: min-content;
-
       .title-home {
         font-family: "Finger Paint";
         font-style: normal;
         font-weight: 400;
-        font-size: 128px;
+        font-size: 168px;
         margin-bottom: 10px;
-        -webkit-user-select: none;
-        user-select: none;
 
         @include tablet {
           font-size: 100px;
@@ -32,11 +31,19 @@
         }
 
         @include mobile {
-          font-size: 50px;
+          font-size: 60px;
         }
 
         @include s-mobile {
-          font-size: 30px;
+          font-size: 35px;
+        }
+      }
+
+      .subtitle-home {
+        color: var(--gray-color);
+        font-family: 'Roboto', 'sans-serif';
+        @include tablet {
+          font-size: 20px;
         }
       }
 
@@ -45,14 +52,18 @@
         font-style: normal;
         font-weight: 400;
         font-size: 20px;
-        line-height: 23px;
-        width: 90%;
-        -webkit-user-select: none;
-        user-select: none;
-        margin-bottom: 30px;
+        line-height: 30px;
+        margin: 30px 0;
+        padding-right: 570px;
+
+        @include tablet {
+          font-size: 16px;
+          padding-right: 0px;
+          margin: 20px 0;
+        }
 
         @include mobile {
-          font-size: 10px;
+          font-size: 14px;
         }
       }
     }

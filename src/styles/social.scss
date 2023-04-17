@@ -1,40 +1,47 @@
 .social {
   position: fixed;
   bottom: 0;
-  left: 90px;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  &.mail {
-    left: auto;
-    right: 50px;
+  &.icons {
+    left: 50px;
   }
 
-  @include tablet {
-    display: none;
+  &.mail {
+    right: 50px;
+    width: 20px;
   }
+
+
   @include mobile {
     display: none;
   }
   .social-list {
     list-style: none;
     width: min-content;
+    font-family: "Finger Paint", cursive;
+
+    &.reverse {
+      transform: rotate(-90deg);
+      li {
+        margin-bottom: 0;
+        transform: translateX(130px);
+        a:hover {
+          transform: translateX(10px);
+        }
+      }
+    }
 
     li {
       margin-bottom: 30px;
-
-      &.text-reverse {
-        font-family: "Finger Paint", cursive;
-        transform: rotate(-90deg);
-        margin-bottom: 130px;
-      }
     }
   }
 
   .social-line {
     width: 2px;
     height: 109px;
-    background-color: #d9d9d9;
+    background-color: var(--gray-color);
   }
 }

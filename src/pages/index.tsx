@@ -31,15 +31,16 @@ export default function Home() {
         {/* FIRST SECTION */}
         <div id='home' className='home'>
           <div id='particles-js'></div>
-          <div className='home-content'>
+          <div className='home-content container'>
             <div className='home-content__info'>
               <h1 className='title-home animate__animated animate__fadeInDown'>
                 YoungFlex
               </h1>
+              <h2 className='subtitle-home'>I build things for the web.</h2>
               <p className='description animate__animated animate__fadeInDown'>
-                {
-                  "Soy un desarrollador FullStack especializado en la construccion de herramientas y experiencias digitales."
-                }
+                Soy un Desarrollador Fullstack especializado en la construccion
+                (y ocasionalmente en el diseño) de increibles experiencias web,
+                como tambien un apasionado en el desarrollo de videojuegos.
               </p>
               <a
                 className='animate__animated animate__fadeInDown btn'
@@ -52,18 +53,20 @@ export default function Home() {
         </div>
         {/* SECOND SECTION */}
         <div id='about' className='about'>
-          <h2>About</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
-            necessitatibus quo consequatur ab quasi numquam qui ipsam, ipsa
-            ipsum possimus architecto totam in harum, reiciendis pariatur optio.
-            Dolorum, suscipit nesciunt.
-          </p>
+          <div className='about-content container'>
+            <h2>About</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
+              necessitatibus quo consequatur ab quasi numquam qui ipsam, ipsa
+              ipsum possimus architecto totam in harum, reiciendis pariatur
+              optio. Dolorum, suscipit nesciunt.
+            </p>
+          </div>
         </div>
       </main>
 
       {/* FIXED SOCIAL */}
-      <div className='animate__animated animate__fadeInUpBig social'>
+      <div className='animate__animated animate__fadeInUpBig social icons'>
         <ul className='social-list'>
           {social.map((item) => (
             <li key={item.title}>
@@ -81,9 +84,9 @@ export default function Home() {
         <div className='social-line'></div>
       </div>
       <div className='animate__animated animate__fadeInUpBig social mail'>
-        <ul className='social-list'>
+        <ul className='social-list reverse'>
           <li className='text-reverse'>
-            <a className='line' href={`mailto=${mail}`}>
+            <a className='icon' href={`mailto:${mail}`}>
               {mail}
             </a>
           </li>

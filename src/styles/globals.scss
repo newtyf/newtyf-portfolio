@@ -4,11 +4,67 @@
   box-sizing: border-box;
 }
 
+@mixin s-mobile {
+  @media (max-width: 300px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+:root {
+  --white-color: #f3f3f3;
+  --gray-color: #737579;
+  --blue-color: #2185d5;
+  --light-dark-color: #101010;
+  --dark-color: #000000;
+}
+
 body {
-  background-color: #000000;
+  background: rgb(19, 19, 19);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(19, 19, 19, 1) 0%,
+    rgba(24, 24, 24, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(19, 19, 19, 1) 0%,
+    rgba(24, 24, 24, 1) 100%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(19, 19, 19, 1) 0%,
+    rgba(24, 24, 24, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#131313",endColorstr="#181818",GradientType=1);
   height: 100vh;
-  color: white;
+  color: var(--white-color);
   font-family: "Roboto", sans-serif;
+}
+
+main {
+  .container {
+    padding: 0 380px;
+
+    @include tablet {
+      padding: 0 150px;
+    }
+
+    @include mobile {
+      padding: 0 30px;
+    }
+  }
 }
 
 h2 {
@@ -45,13 +101,13 @@ a {
 
   &.icon {
     font-size: 20px;
-    color: #D9D9D9;
+    color: var(--gray-color);
     transition: 300ms;
     display: inline-block;
 
     &:hover {
-      color: #ffffff;
-      transform: translateY(-10px)
+      color: var(--blue-color);
+      transform: translateY(-10px);
     }
   }
 }
@@ -59,13 +115,14 @@ a {
 .btn {
   cursor: pointer;
   display: inline-block;
-  border: 2px solid #ffffff;
-  background-color: #000000;
-  color: #ffffff;
+  border: 1px solid var(--white-color);
+  background-color: var(--light-dark-color);
   padding: 15px;
   transition: all ease-in-out 200ms;
   -webkit-user-select: none;
   user-select: none;
+  text-align: center;
+  min-width: 200px;
 
   font-family: "Roboto";
   font-style: normal;
@@ -75,24 +132,6 @@ a {
   &:hover {
     background-color: #ffffff;
     color: #000000;
-  }
-}
-
-@mixin s-mobile {
-  @media (max-width: 300px) {
-    @content;
-  }
-}
-
-@mixin mobile {
-  @media (max-width: 600px) {
-    @content;
-  }
-}
-
-@mixin tablet {
-  @media (max-width: 1200px) {
-    @content;
   }
 }
 
