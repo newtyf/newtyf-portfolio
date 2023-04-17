@@ -1,14 +1,14 @@
 .social {
   position: fixed;
   bottom: 0;
-  left: 140px;
+  left: 90px;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   &.mail {
     left: auto;
-    right: 80px;
+    right: 50px;
   }
 
   @include tablet {
@@ -19,6 +19,7 @@
   }
   .social-list {
     list-style: none;
+    width: min-content;
 
     li {
       margin-bottom: 30px;

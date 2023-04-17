@@ -44,7 +44,7 @@ a {
   }
 
   &.icon {
-    font-size: 30px;
+    font-size: 20px;
     color: #D9D9D9;
     transition: 300ms;
     display: inline-block;
@@ -98,4 +98,5 @@ a {
 
 @import "./navbar.scss";
 @import "./home.scss";
+@import "./about.scss";
 @import "./social.scss";

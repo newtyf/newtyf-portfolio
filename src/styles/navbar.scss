@@ -4,11 +4,12 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 50px;
+  padding: 0 40px;
   font-family: "Finger Paint", cursive;
   width: 100%;
-  height: 15vh;
+  height: 75px;
   z-index: 99;
+  transition: all 0.3s;
 
   h2 {
     cursor: pointer;
@@ -27,11 +28,17 @@ header {
   }
 
   nav {
-    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     ol {
       display: flex;
       flex-direction: row;
       justify-content: space-around;
+      width: 30%;
+
       li {
         position: relative;
         animation: fadeInDown;

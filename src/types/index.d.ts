@@ -1,5 +1,3 @@
-export {};
-
 declare global {
   interface Window {
     particlesJS: {
@@ -7,3 +5,10 @@ declare global {
     };
   }
 }
+
+type option = {
+  title: string;
+  link: string;
+};
+
+export {option};

@@ -1,8 +1,8 @@
-import Head from "next/head";
+import { Navbar } from "@/components/Navbar";
+import { option } from "@/types";
 import Image from "next/image";
-import Link from "next/link";
 
-const menu = [
+const menu: option[] = [
   {
     title: "About",
     link: "#about",
@@ -15,9 +15,10 @@ const menu = [
   { title: "Contact", link: "#contact" },
 ];
 
-const social = [
+const social: option[] = [
   { title: "github", link: "https://github.com/newtyf" },
   { title: "linkedin", link: "https://www.linkedin.com/in/axel-mu%C3%B1oz/" },
+  { title: "instagram", link: "https://www.instagram.com/newt_yf/" },
 ];
 
 const mail = "axelskam.098@gmail.com";
@@ -25,26 +26,7 @@ const mail = "axelskam.098@gmail.com";
 export default function Home() {
   return (
     <>
-      <header>
-        <Link className='animate__animated animate__fadeInDown' href={"#home"}>
-          <h2>Newtyf</h2>
-        </Link>
-        <nav>
-          <ol>
-            {menu.map((item, index) => (
-              <li
-                className={`animate__animated`}
-                style={{animationDelay: `${(index+1)/2}s`}}
-                key={item.title}
-              >
-                <Link className='line' href={item.link}>
-                  {item.title}
-                </Link>
-              </li>
-            ))}
-          </ol>
-        </nav>
-      </header>
+      <Navbar menu={menu} />
       <main>
         {/* FIRST SECTION */}
         <div id='home' className='home'>
