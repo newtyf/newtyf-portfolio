@@ -9,6 +9,7 @@ declare global {
 type option = {
   title: string;
   link: string;
+  styleCustom?: boolean
 };
 
 export {option};

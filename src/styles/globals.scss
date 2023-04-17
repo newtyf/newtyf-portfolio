@@ -1,6 +1,8 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
   box-sizing: border-box;
 }
 
@@ -17,7 +19,13 @@
 }
 
 @mixin tablet {
-  @media (max-width: 1200px) {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: 2600px) {
     @content;
   }
 }
@@ -28,6 +36,10 @@
   --blue-color: #2185d5;
   --light-dark-color: #101010;
   --dark-color: #000000;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {

@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { option } from "@/types";
 import Image from "next/image";
+import { useEffect } from "react";
 
 const menu: option[] = [
   {
@@ -13,6 +14,7 @@ const menu: option[] = [
   },
   { title: "Projects", link: "#projects" },
   { title: "Contact", link: "#contact" },
+  { title: "Resume", link: "/cv.pdf", styleCustom: true },
 ];
 
 const social: option[] = [
@@ -36,7 +38,9 @@ export default function Home() {
               <h1 className='title-home animate__animated animate__fadeInDown'>
                 YoungFlex
               </h1>
-              <h2 className='subtitle-home animate__animated animate__fadeInDown'>I build things for the web.</h2>
+              <h2 className='subtitle-home animate__animated animate__fadeInDown animate__slow'>
+                I build things for the web.
+              </h2>
               <p className='description animate__animated animate__fadeInDown'>
                 Soy un Desarrollador Fullstack especializado en la construccion
                 (y ocasionalmente en el diseño) de increibles experiencias web,

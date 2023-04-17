@@ -2,60 +2,53 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 import { option } from "@/types";
+import { NavBarEffect } from "@/hooks/navBarEffect";
 
 export const Navbar = ({ menu }: { menu: option[] }) => {
-  useEffect(() => {
-    var prevScrollpos = window.scrollY;
-    var navBar = document.getElementById("navbar")!;
-    var header = document.querySelector("header")!;
-
-    const showAndHideNavbar = () => {
-      var currentScrollPos = window.scrollY;
-
-      if (window.scrollY > 0) {
-        header.style.backgroundColor = "transparent";
-        header.style.boxShadow = "0 2px 10px -8px #D9D9D9";
-        header.style.borderEndEndRadius = "10px";
-        header.style.backdropFilter = "blur(30px) brightness(30%)"
-      } else {
-        header.style.backgroundColor = "transparent";
-        header.style.boxShadow = "none";
-        header.style.backdropFilter = "none"
-      }
-
-      if (prevScrollpos > currentScrollPos) {
-        header.style.top = "0px";
-      } else {
-        header.style.top = "-120px";
-      }
-      prevScrollpos = currentScrollPos;
-    };
-    window.addEventListener("scroll", showAndHideNavbar);
-
-    return () => {
-      window.removeEventListener("scroll", showAndHideNavbar);
-    };
-  }, []);
+  NavBarEffect();
 
   return (
     <header>
       <nav id='navbar'>
-        <Link className='animate__animated animate__fadeInDown' href={"#home"}>
+        <Link
+          className='animate__animated animate__fadeInDown'
+          href={"#home"}
+          scroll={false}
+        >
           <h2>Newtyf</h2>
         </Link>
         <ol>
           {menu.map((item, index) => (
             <li
               className={`animate__animated`}
-              style={{ animationDelay: `${(index + 1) / 2}s` }}
+              style={{ animationDelay: `${(index + 1) / 3}s` }}
               key={item.title}
             >
-              <Link className='line' href={item.link}>
+              <Link
+                className={!!item.styleCustom ? "btn-resume" : "line"}
+                href={item.link}
+                scroll={false}
+              >
                 {item.title}
               </Link>
             </li>
           ))}
         </ol>
+        <div className='menu animate__animated animate__fadeInDown'>
+          <button title='menu'>
+            <div
+              id='nav-icon1'
+              onClick={(e) => {
+                e.currentTarget.classList.toggle("open");
+              }}
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            {/* <i className='bi bi-list'></i> */}
+          </button>
+        </div>
       </nav>
     </header>
   );
