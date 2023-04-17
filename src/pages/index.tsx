@@ -36,7 +36,7 @@ export default function Home() {
               <h1 className='title-home animate__animated animate__fadeInDown'>
                 YoungFlex
               </h1>
-              <h2 className='subtitle-home'>I build things for the web.</h2>
+              <h2 className='subtitle-home animate__animated animate__fadeInDown'>I build things for the web.</h2>
               <p className='description animate__animated animate__fadeInDown'>
                 Soy un Desarrollador Fullstack especializado en la construccion
                 (y ocasionalmente en el diseño) de increibles experiencias web,
