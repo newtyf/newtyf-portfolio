@@ -8,20 +8,21 @@ export const Navbar = ({ menu }: { menu: option[] }) => {
   NavBarEffect();
 
   return (
-    <header>
       <nav id='navbar'>
-        <Link
-          className='animate__animated animate__fadeInDown'
-          href={"#home"}
-          scroll={false}
-        >
-          <h2>Newtyf</h2>
-        </Link>
+        <h2 className="animate__animated">
+          <Link
+            href={"#home"}
+            scroll={false}
+          >
+            Newtyf
+          </Link>
+        </h2>
+
         <ol>
           {menu.map((item, index) => (
             <li
-              className={`animate__animated`}
-              style={{ animationDelay: `${(index + 1) / 3}s` }}
+              className={`animate__animated animate__fadeInDown`}
+              style={{ animationDelay: `${(index + 1) / 4}s` }}
               key={item.title}
             >
               <Link
@@ -34,7 +35,8 @@ export const Navbar = ({ menu }: { menu: option[] }) => {
             </li>
           ))}
         </ol>
-        <div className='menu animate__animated animate__fadeInDown'>
+
+        <div className='menu-hamburger animate__animated animate__fadeInDown'>
           <button title='menu'>
             <div
               id='nav-icon1'
@@ -50,6 +52,5 @@ export const Navbar = ({ menu }: { menu: option[] }) => {
           </button>
         </div>
       </nav>
-    </header>
   );
 };

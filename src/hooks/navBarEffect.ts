@@ -3,7 +3,7 @@ import { useEffect } from "react";
 export const NavBarEffect = (): void => {
   useEffect(() => {
     var prevScrollpos = window.scrollY;
-    var header = document.querySelector("header")!;
+    var header = document.querySelector<HTMLElement>("#navbar")!;
 
     const showAndHideNavbar = () => {
       var currentScrollPos = window.scrollY;

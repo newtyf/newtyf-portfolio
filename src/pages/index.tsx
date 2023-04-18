@@ -16,13 +16,11 @@ const menu: option[] = [
   { title: "Contact", link: "#contact" },
   { title: "Resume", link: "/cv.pdf", styleCustom: true },
 ];
-
 const social: option[] = [
   { title: "github", link: "https://github.com/newtyf" },
   { title: "linkedin", link: "https://www.linkedin.com/in/axel-mu%C3%B1oz/" },
   { title: "instagram", link: "https://www.instagram.com/newt_yf/" },
 ];
-
 const mail = "axelskam.098@gmail.com";
 
 export default function Home() {
