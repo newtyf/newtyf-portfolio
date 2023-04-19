@@ -7,6 +7,7 @@
   width: 100vw;
   position: fixed;
   transition: top 600ms;
+  z-index: 90;
 
   @include mobile {
     padding: 30px 20px;
@@ -20,6 +21,7 @@
     animation-duration: 2s;
     transition: 300ms;
     animation-fill-mode: backwards;
+    font-family: var(--font-fira-code);
     &:hover {
       transform: rotate(-10deg);
     }
@@ -30,29 +32,16 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 500px;
 
     li {
-      width: 80px;
       text-align: center;
       list-style-position: inside;
       color: var(--blue-color);
+      font-family: var(--font-sp-mono);
+      margin-left: 20px;
+
       &:last-child {
         list-style-type: none;
-      }
-
-      .btn-resume {
-        background-color: var(--white-color);
-        color: var(--dark-color);
-        transition: background 400ms;
-        display: inline-block;
-        padding: 10px;
-
-        &:hover {
-          outline: 1px dashed var(--white-color);
-          background-color: var(--light-dark-color);
-          color: var(--white-color);
-        }
       }
     }
 

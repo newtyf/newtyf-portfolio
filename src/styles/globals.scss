@@ -36,6 +36,11 @@
   --blue-color: #2185d5;
   --light-dark-color: #101010;
   --dark-color: #000000;
+
+  --font-sp-mono: "Space Mono", monospace;
+  --font-roboto: "Roboto", sans-serif;
+  --font-finger-paint: "Finger Paint", cursive;
+  --font-fira-code: "Fira Code", monospace;
 }
 
 html {
@@ -65,21 +70,27 @@ body {
 }
 
 main {
-  .container {
-    padding: 0 380px;
+  padding: 0 120px;
 
-    @include tablet {
-      padding: 0 150px;
-    }
+  #particles-js {
+    top: 0;
+    left: 0;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+  }
 
-    @include mobile {
-      padding: 0 30px;
-    }
+  @include mobile {
+    padding: 0 20px;
   }
 }
 
+section {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
 h2 {
-  font-family: "Finger Paint", cursive;
   font-size: 32px;
 }
 
@@ -87,6 +98,15 @@ a {
   color: var(--white-color);
   position: relative;
   text-decoration: none;
+  transition: color 200ms;
+
+  &:hover {
+    color: var(--blue-color);
+  }
+
+  &.line {
+    color: var(--blue-color);
+  }
 
   &.line::before {
     content: "";
@@ -125,15 +145,13 @@ a {
 
 .btn {
   cursor: pointer;
-  display: inline-block;
-  border: 1px solid var(--white-color);
-  background-color: var(--light-dark-color);
-  padding: 15px;
-  transition: all ease-in-out 200ms;
-  -webkit-user-select: none;
-  user-select: none;
   text-align: center;
-  min-width: 200px;
+  max-width: 300px;
+  background-color: var(--white-color);
+  color: var(--dark-color);
+  transition: background 400ms;
+  display: inline-block;
+  padding: 10px;
 
   font-family: "Roboto";
   font-style: normal;
@@ -141,8 +159,9 @@ a {
   font-size: inherit;
 
   &:hover {
-    background-color: #ffffff;
-    color: #000000;
+    outline: 1px dashed var(--white-color);
+    background-color: transparent;
+    color: var(--white-color);
   }
 }
 
@@ -150,3 +169,4 @@ a {
 @import "./home.scss";
 @import "./about.scss";
 @import "./social.scss";
+@import "./menuAside.scss";

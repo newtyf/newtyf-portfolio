@@ -1,6 +1,10 @@
+import { AsideSlide } from "@/components/AsideSlide";
 import { Navbar } from "@/components/Navbar";
+import { AsideEffect } from "@/hooks/AsideEffect";
 import { option } from "@/types";
+import dynamic from "next/dynamic";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect } from "react";
 
 const menu: option[] = [
@@ -24,37 +28,36 @@ const social: option[] = [
 const mail = "axelskam.098@gmail.com";
 
 export default function Home() {
+  const { hideSlide, showSlide } = AsideEffect();
+
   return (
     <>
-      <Navbar menu={menu} />
+      <Navbar menu={menu} showSlide={showSlide} />
       <main>
+        {/* particles */}
+        <div id='particles-js'></div>
         {/* FIRST SECTION */}
-        <div id='home' className='home'>
-          <div id='particles-js'></div>
-          <div className='home-content container'>
-            <div className='home-content__info'>
-              <h1 className='title-home animate__animated animate__fadeInDown'>
-                YoungFlex
-              </h1>
-              <h2 className='subtitle-home animate__animated animate__fadeInDown animate__slow'>
-                I build things for the web.
-              </h2>
-              <p className='description animate__animated animate__fadeInDown'>
-                Soy un Desarrollador Fullstack especializado en la construccion
-                (y ocasionalmente en el diseño) de increibles experiencias web,
-                como tambien un apasionado en el desarrollo de videojuegos.
-              </p>
-              <a
-                className='animate__animated animate__fadeInDown btn'
-                href='mailto:axelskam.123@outlook.es'
-              >
-                Contact me!
-              </a>
-            </div>
+        <section id='home'>
+          <div className='typewriter'>
+            <h1 className='title-home'>YoungFlex</h1>
           </div>
-        </div>
+          <h2 className='subtitle-home animate__animated animate__fadeInDown animate__slow'>
+            I build things for the web.
+          </h2>
+          <p className='description animate__animated animate__fadeInDown'>
+            Soy un Desarrollador Fullstack especializado en la construccion (y
+            ocasionalmente en el diseño) de increibles experiencias web, como
+            tambien un apasionado en el desarrollo de videojuegos.
+          </p>
+          <a
+            className='animate__animated animate__fadeInDown btn'
+            href='mailto:axelskam.123@outlook.es'
+          >
+            Contact me!
+          </a>
+        </section>
         {/* SECOND SECTION */}
-        <div id='about' className='about'>
+        <section id='about'>
           <div className='about-content container'>
             <h2>About</h2>
             <p>
@@ -64,8 +67,14 @@ export default function Home() {
               optio. Dolorum, suscipit nesciunt.
             </p>
           </div>
-        </div>
+        </section>
       </main>
+
+      {/* menu slide */}
+      <AsideSlide
+        menu={menu}
+        hideSlide={hideSlide}
+      />
 
       {/* FIXED SOCIAL */}
       <div className='animate__animated animate__fadeInUpBig social icons'>

@@ -1,71 +1,82 @@
-.home {
+#home {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  -webkit-user-select: none;
+  user-select: none;
 
-  #particles-js {
-    height: inherit;
-    width: inherit;
-    position: absolute;
-  }
+  .typewriter {
+    .title-home {
+      margin-left: -40px;
+      font-family: var(--font-fira-code);
+      font-size: 178px;
 
-  .home-content {
-    height: inherit;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    -webkit-user-select: none;
-    user-select: none;
+      overflow: hidden; /* Ensures the content is not revealed until the animation */
+      border-right: 2px solid rgba(255, 255, 255, 0.75); /* The typwriter cursor */
+      white-space: nowrap;
+      animation: typing 2.5s steps(30, end), blink-caret .75s step-end infinite;
 
-
-    .home-content__info {
-      .title-home {
-        font-family: "Finger Paint";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 168px;
+      @include tablet {
+        font-size: 100px;
         margin-bottom: 10px;
-
-        @include tablet {
-          font-size: 100px;
-          margin-bottom: 10px;
-        }
-
-        @include mobile {
-          font-size: 60px;
-        }
-
-        @include s-mobile {
-          font-size: 35px;
-        }
       }
 
-      .subtitle-home {
-        color: var(--gray-color);
-        font-family: 'Roboto', 'sans-serif';
-        @include tablet {
-          font-size: 20px;
-        }
+      @include mobile {
+        font-size: 60px;
       }
 
-      .description {
-        font-family: "Roboto";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 30px;
-        margin: 30px 0;
-        padding-right: 570px;
-
-        @include tablet {
-          font-size: 16px;
-          padding-right: 0px;
-          margin: 20px 0;
-        }
-
-        @include mobile {
-          font-size: 14px;
-        }
+      @include s-mobile {
+        font-size: 35px;
       }
     }
+  }
+
+  .subtitle-home {
+    color: var(--gray-color);
+    font-size: 42px;
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+
+  .description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 20px 0;
+    padding-right: 570px;
+
+    @include tablet {
+      font-size: 16px;
+      padding-right: 0px;
+      margin: 20px 0;
+    }
+
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgba(255, 255, 255, 0.75);
   }
 }
