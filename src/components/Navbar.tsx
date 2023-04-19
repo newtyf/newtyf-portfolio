@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { option } from "@/types";
-import { NavBarEffect } from "../hooks/NavBarEffect";
+import { NavBarEffect } from "@/hooks/NavBarEffect";
 
 export const Navbar = ({
   menu,
