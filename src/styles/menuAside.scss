@@ -7,7 +7,6 @@ aside {
   justify-content: flex-end;
   height: 100vh;
   width: 100vw;
-
   transition: right 1s;
 
   .background-close {
@@ -29,11 +28,12 @@ aside {
     }
 
     ol {
-      max-width: 80px;
+      max-width: 95px;
       margin: 0 auto;
       font-size: 20px;
       text-align: center;
       list-style-position: inside;
+      list-style-type: decimal-leading-zero;
 
       li {
         &:last-child {
