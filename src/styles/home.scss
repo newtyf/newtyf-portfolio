@@ -20,6 +20,7 @@
       @include tablet {
         font-size: 100px;
         margin-bottom: 10px;
+        margin-left: 0px;
       }
 
       @include mobile {
