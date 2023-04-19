@@ -34,12 +34,12 @@ export default function Home() {
         <div id='particles-js'></div>
         {/* FIRST SECTION */}
         <section id='home'>
-          <div className='typewriter'>
-            <h1 className='title-home'>YoungFlex</h1>
-          </div>
           <h2 className='subtitle-home animate__animated animate__fadeInDown animate__slow'>
             I build things for the web.
           </h2>
+          <div className='typewriter'>
+            <h1 className='title-home'>YoungFlex</h1>
+          </div>
           <p className='description animate__animated animate__fadeInDown'>
             Soy un Desarrollador Fullstack especializado en la construccion (y
             ocasionalmente en el diseño) de increibles experiencias web, como
@@ -67,10 +67,7 @@ export default function Home() {
       </main>
 
       {/* menu slide */}
-      <AsideSlide
-        menu={menu}
-        hideSlide={hideSlide}
-      />
+      <AsideSlide menu={menu} hideSlide={hideSlide} />
 
       {/* FIXED SOCIAL */}
       <div className='animate__animated animate__fadeInUpBig social icons'>
