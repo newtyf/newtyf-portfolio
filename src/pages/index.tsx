@@ -2,10 +2,6 @@ import { AsideSlide } from "@/components/AsideSlide";
 import { Navbar } from "@/components/Navbar";
 import { AsideEffect } from "@/hooks/AsideEffect";
 import { option } from "@/types";
-import dynamic from "next/dynamic";
-import Image from "next/image";
-import Link from "next/link";
-import { useEffect } from "react";
 
 const menu: option[] = [
   {
