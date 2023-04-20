@@ -2,6 +2,7 @@ export const AsideEffect = () => {
   let showSlide: () => void = () => {};
   let hideSlide: () => void = () => {};
   if (typeof window === "object") {
+    const body = document.querySelector<HTMLBodyElement>("body")!
     const aside = document.querySelector("aside")!;
     const backgroundClose =
       document.querySelector<HTMLDivElement>(".background-close")!;
@@ -11,12 +12,14 @@ export const AsideEffect = () => {
 
     hideSlide = () => {
       backgroundClose.style.backgroundColor = "transparent";
+      body.style.overflow = "visible"
       xButton.children.item(0)?.classList.remove("open");
       aside.style.right = "-100vw";
     };
 
     showSlide = () => {
       aside.style.right = "0";
+      body.style.overflow = "hidden"
       setTimeout(() => {
         backgroundClose.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
       }, 1000);
