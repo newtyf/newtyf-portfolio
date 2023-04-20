@@ -21,7 +21,7 @@
   .social-list {
     list-style: none;
     width: min-content;
-    font-family: "Finger Paint", cursive;
+    font-family: var(--font-sp-mono);
 
     &.reverse {
       transform: rotate(-90deg);

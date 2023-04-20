@@ -28,7 +28,7 @@ export const AsideSlide = ({
               key={item.title}
             >
               <Link
-                className={!!item.styleCustom ? "btn" : ""}
+                className={!!item.styleCustom ? "btn" : "nav"}
                 href={item.link}
                 onClick={hideSlide}
                 scroll={false}

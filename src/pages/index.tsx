@@ -2,6 +2,7 @@ import { AsideSlide } from "@/components/AsideSlide";
 import { Navbar } from "@/components/Navbar";
 import { AsideEffect } from "@/hooks/AsideEffect";
 import { option } from "@/types";
+import Image from "next/image";
 
 const menu: option[] = [
   {
@@ -54,14 +55,59 @@ export default function Home() {
         </section>
         {/* SECOND SECTION */}
         <section id='about'>
-          <div className='about-content container'>
-            <h2>About</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
-              necessitatibus quo consequatur ab quasi numquam qui ipsam, ipsa
-              ipsum possimus architecto totam in harum, reiciendis pariatur
-              optio. Dolorum, suscipit nesciunt.
-            </p>
+          <div className='about-title'>
+            <h2>
+              <span className='code-number'>01.</span> About me
+            </h2>
+            <span className='line-title'></span>
+          </div>
+          <div className='about-content'>
+            <div className='about-content__text'>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse
+                magnam odit ex consequuntur. Eos ab quos, nam harum facere
+                cupiditate tempora nostrum inventore aspernatur quaerat
+                repudiandae molestias consequuntur. Veniam, recusandae?
+                Consectetur quam, deleniti vero nulla totam quod sint officiis
+                consequatur laboriosam quis repellat libero unde, sit molestias
+                esse blanditiis similique quia voluptatibus sequi. Accusantium
+                velit quibusdam reiciendis dolores nemo. A.
+              </p>
+
+              <p>
+                Nihil voluptas non labore nisi ipsa doloremque illo porro enim!
+                Optio inventore quis reprehenderit ab provident, adipisci ipsam
+                dolores libero maxime earum cum quo ipsum similique! Error
+                similique aperiam sequi! Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit. Aut impedit, cumque ipsum porro sed ab
+                voluptatibus amet consequuntur beatae molestias eaque labore
+                eius debitis voluptatum velit ex, culpa, quidem laudantium.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
+                impedit, cumque ipsum porro sed ab voluptatibus amet
+                consequuntur beatae molestias eaque labore eius debitis
+                voluptatum velit ex, culpa, quidem laudantium.
+              </p>
+              <ul>
+                <li>Javascript</li>
+                <li>TypeScript</li>
+                <li>C# & .Net</li>
+                <li>AWS</li>
+                <li>Golang</li>
+                <li>Sql & noSql</li>
+              </ul>
+            </div>
+            <div className='about-content__image'>
+              <div className='content-image'>
+                <Image
+                  width={240}
+                  height={240}
+                  src={"/profile.jpg"}
+                  alt='profile-photo'
+                />
+              </div>
+            </div>
           </div>
         </section>
       </main>

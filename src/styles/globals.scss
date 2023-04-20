@@ -95,13 +95,16 @@ h2 {
 }
 
 a {
-  color: var(--white-color);
   position: relative;
   text-decoration: none;
   transition: color 200ms;
+  color: var(--blue-color);
 
-  &:hover {
-    color: var(--blue-color);
+  &.nav {
+    color: var(--white-color);
+    &:hover {
+      color: var(--blue-color);
+    }
   }
 
   &.line {
@@ -113,10 +116,10 @@ a {
     position: absolute;
     display: block;
     width: 100%;
-    height: 2px;
+    height: 1px;
     bottom: 0;
     left: 0;
-    background-color: var(--white-color);
+    background-color: var(--blue-color);
     transform: scaleX(0);
     transform-origin: top left;
     transition: transform 0.3s ease;
