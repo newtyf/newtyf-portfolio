@@ -1,5 +1,6 @@
 import { AsideSlide } from "@/components/AsideSlide";
 import { Navbar } from "@/components/Navbar";
+import VerticalTabs from "@/components/VerticalTabs";
 import { AsideEffect } from "@/hooks/AsideEffect";
 import { option } from "@/types";
 import Image from "next/image";
@@ -10,7 +11,7 @@ const menu: option[] = [
     link: "#about",
   },
   {
-    title: "Work",
+    title: "Experience",
     link: "#work",
   },
   { title: "Projects", link: "#projects" },
@@ -55,9 +56,9 @@ export default function Home() {
         </section>
         {/* SECOND SECTION */}
         <section id='about'>
-          <div className='about-title'>
+          <div className='title-section'>
             <h2>
-              <span className='code-number'>01.</span> About me
+              <span className='code-number'>01.</span> <a href="#about" className="nav">About me</a>
             </h2>
             <span className='line-title'></span>
           </div>
@@ -109,6 +110,22 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </section>
+        {/* THIRD SECTION */}
+        <section id='work'>
+          <div className='title-section'>
+            <h2>
+              <span className='code-number'>02.</span> Experience
+            </h2>
+            <span className='line-title'></span>
+          </div>
+          <div className='work-content'>
+            <VerticalTabs />
+          </div>
+        </section>
+        {/* FOURTH SECTION */}
+        <section id='projects'>
+
         </section>
       </main>
 

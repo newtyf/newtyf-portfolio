@@ -1,52 +1,10 @@
 #about {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  .about-title {
-    display: flex;
-    position: relative;
-    align-items: center;
-    padding: 20px 0;
-
-    h2 {
-      font-size: 28px;
-      @include mobile {
-        font-size: 18px;
-      }
-      @include s-mobile {
-        font-size: 12px;
-      }
-
-      .code-number {
-        font-size: 24px;
-        font-family: var(--font-fira-code);
-        color: var(--blue-color);
-        @include mobile {
-          font-size: 12px;
-        }
-        @include s-mobile {
-          font-size: 8px;
-        }
-      }
-    }
-
-    .line-title {
-      width: 100%;
-      max-width: 280px;
-      height: 1px;
-      margin-left: 20px;
-      margin-top: 4px;
-      background-color: var(--gray-color);
-      @include tablet {
-        max-width: 140px;
-      }
-      @include s-mobile {
-        max-width: 100px;
-      }
-    }
-  }
+  margin-top: 100px;
+  margin-bottom: 200px;
+  padding-top: 100px;
 
   .about-content {
     display: flex;

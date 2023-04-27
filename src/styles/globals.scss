@@ -37,6 +37,8 @@
   --light-dark-color: #101010;
   --dark-color: #000000;
 
+  --background-gray: rgb(19, 19, 19);
+
   --font-sp-mono: "Space Mono", monospace;
   --font-roboto: "Roboto", sans-serif;
   --font-finger-paint: "Finger Paint", cursive;
@@ -94,6 +96,12 @@ h2 {
   font-size: 32px;
 }
 
+h4 {
+  font-family: var(--font-fira-code);
+  font-size: 18px;
+  color: var(--blue-color);
+}
+
 a {
   position: relative;
   text-decoration: none;
@@ -146,6 +154,51 @@ a {
   }
 }
 
+.title-section {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 20px 0;
+
+  h2 {
+    font-size: 28px;
+    @include mobile {
+      font-size: 18px;
+    }
+    @include s-mobile {
+      font-size: 12px;
+    }
+
+    .code-number {
+      font-size: 24px;
+      font-family: var(--font-fira-code);
+      color: var(--blue-color);
+      @include mobile {
+        font-size: 12px;
+      }
+      @include s-mobile {
+        font-size: 8px;
+      }
+    }
+  }
+
+  .line-title {
+    width: 100%;
+    max-width: 280px;
+    height: 1px;
+    margin-left: 20px;
+    margin-top: 4px;
+    background-color: var(--gray-color);
+    @include tablet {
+      max-width: 140px;
+    }
+    @include s-mobile {
+      max-width: 100px;
+    }
+  }
+}
+
+
 .btn {
   cursor: pointer;
   text-align: center;
@@ -171,5 +224,7 @@ a {
 @import "./navbar.scss";
 @import "./home.scss";
 @import "./about.scss";
+@import "./work.scss";
+
 @import "./social.scss";
 @import "./menuAside.scss";
