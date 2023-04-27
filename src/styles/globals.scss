@@ -90,6 +90,11 @@ main {
 section {
   margin: 0 auto;
   max-width: 1000px;
+
+  &.container {
+    padding-top: 100px;
+    margin-bottom: 100px;
+  }
 }
 
 h2 {
@@ -174,10 +179,10 @@ a {
       font-family: var(--font-fira-code);
       color: var(--blue-color);
       @include mobile {
-        font-size: 12px;
+        font-size: 18px;
       }
       @include s-mobile {
-        font-size: 8px;
+        font-size: 12px;
       }
     }
   }

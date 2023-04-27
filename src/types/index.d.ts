@@ -12,4 +12,12 @@ type option = {
   styleCustom?: boolean
 };
 
-export {option};
+type job = {
+  title: string,
+  description: string[],
+  role: string,
+  start: string,
+  end: string
+}
+
+export {option, job};

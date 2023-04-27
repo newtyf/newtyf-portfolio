@@ -2,7 +2,7 @@ import { AsideSlide } from "@/components/AsideSlide";
 import { Navbar } from "@/components/Navbar";
 import VerticalTabs from "@/components/VerticalTabs";
 import { AsideEffect } from "@/hooks/AsideEffect";
-import { option } from "@/types";
+import { job, option } from "@/types";
 import Image from "next/image";
 
 const menu: option[] = [
@@ -11,7 +11,7 @@ const menu: option[] = [
     link: "#about",
   },
   {
-    title: "Experience",
+    title: "Work",
     link: "#work",
   },
   { title: "Projects", link: "#projects" },
@@ -24,6 +24,34 @@ const social: option[] = [
   { title: "instagram", link: "https://www.instagram.com/newt_yf/" },
 ];
 const mail = "axelskam.098@gmail.com";
+const works: job[] = [
+  {
+    title: "Picnic Creativa",
+    description: [
+      `Encargado del desarrollo e implementacion de nuevas features tanto en el lado Frontend como en el lado Backend.`,
+      `Implementacion y desarrollo de Mails Automatizados`,
+      `Administrar y gestionar los servidores de desarrollo.`,
+      `Desarrollo de bots automatizado para la trazabilidad de errores y
+      getion de los servicios implementados.`,
+      `Generar codigo SQL para la gestion e implementacion de nuevas
+      features en la Base de Datos.`,
+    ],
+    role: "Desarrolllador Web",
+    start: "ENE 2022",
+    end: "JUL 2022",
+  },
+  {
+    title: "Mirum Agency",
+    description: [
+      "Maquetado de Mails",
+      "Testeo de Mails",
+      "Investigación de servicios para la mejora en el desarrollo de mails",
+    ],
+    role: "Programador",
+    start: "JUL 2022",
+    end: "MAR 2023",
+  },
+];
 
 export default function Home() {
   const { hideSlide, showSlide } = AsideEffect();
@@ -55,14 +83,17 @@ export default function Home() {
           </a>
         </section>
         {/* SECOND SECTION */}
-        <section id='about'>
-          <div className='title-section'>
+        <section id='about' className='container'>
+          <div className='title-section animate__animated animate__fadeInDown animate__slow'>
             <h2>
-              <span className='code-number'>01.</span> <a href="#about" className="nav">About me</a>
+              <span className='code-number'>01.</span>{" "}
+              <a href='#about' className='nav'>
+                About me
+              </a>
             </h2>
             <span className='line-title'></span>
           </div>
-          <div className='about-content'>
+          <div className='about-content animate__animated animate__fadeIn'>
             <div className='about-content__text'>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse
@@ -100,7 +131,7 @@ export default function Home() {
               </ul>
             </div>
             <div className='about-content__image'>
-              <div className='content-image'>
+              <div className='content-image animate__animated animate__fadeInDown animate__slow'>
                 <Image
                   width={240}
                   height={240}
@@ -112,21 +143,19 @@ export default function Home() {
           </div>
         </section>
         {/* THIRD SECTION */}
-        <section id='work'>
-          <div className='title-section'>
+        <section id='work' className='container'>
+          <div className='title-section animate__animated animate__fadeInDown animate__slow'>
             <h2>
-              <span className='code-number'>02.</span> Experience
+              <span className='code-number'>02.</span> Work
             </h2>
             <span className='line-title'></span>
           </div>
-          <div className='work-content'>
-            <VerticalTabs />
+          <div className='work-content animate__animated animate__fadeIn'>
+            <VerticalTabs works={works} />
           </div>
         </section>
         {/* FOURTH SECTION */}
-        <section id='projects'>
-
-        </section>
+        <section id='projects'></section>
       </main>
 
       {/* menu slide */}
