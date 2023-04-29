@@ -1,57 +1,11 @@
-import { AsideSlide } from "@/components/AsideSlide";
-import { Navbar } from "@/components/Navbar";
-import VerticalTabs from "@/components/VerticalTabs";
-import { AsideEffect } from "@/hooks/AsideEffect";
-import { job, option } from "@/types";
 import Image from "next/image";
 
-const menu: option[] = [
-  {
-    title: "About",
-    link: "#about",
-  },
-  {
-    title: "Work",
-    link: "#work",
-  },
-  { title: "Projects", link: "#projects" },
-  { title: "Contact", link: "#contact" },
-  { title: "Resume", link: "/cv.pdf", styleCustom: true },
-];
-const social: option[] = [
-  { title: "github", link: "https://github.com/newtyf" },
-  { title: "linkedin", link: "https://www.linkedin.com/in/axel-mu%C3%B1oz/" },
-  { title: "instagram", link: "https://www.instagram.com/newt_yf/" },
-];
-const mail = "axelskam.098@gmail.com";
-const works: job[] = [
-  {
-    title: "Picnic Creativa",
-    description: [
-      `Encargado del desarrollo e implementacion de nuevas features tanto en el lado Frontend como en el lado Backend.`,
-      `Implementacion y desarrollo de Mails Automatizados`,
-      `Administrar y gestionar los servidores de desarrollo.`,
-      `Desarrollo de bots automatizado para la trazabilidad de errores y
-      getion de los servicios implementados.`,
-      `Generar codigo SQL para la gestion e implementacion de nuevas
-      features en la Base de Datos.`,
-    ],
-    role: "Desarrolllador Web",
-    start: "ENE 2022",
-    end: "JUL 2022",
-  },
-  {
-    title: "Mirum Agency",
-    description: [
-      "Maquetado de Mails",
-      "Testeo de Mails",
-      "Investigación de servicios para la mejora en el desarrollo de mails",
-    ],
-    role: "Programador",
-    start: "JUL 2022",
-    end: "MAR 2023",
-  },
-];
+import { Navbar } from "@/components/Navbar";
+import { AsideSlide } from "@/components/AsideSlide";
+import VerticalTabs from "@/components/VerticalTabs";
+
+import { AsideEffect } from "@/hooks/AsideEffect";
+import { menu, works, social, mail } from "@/utils/profile";
 
 export default function Home() {
   const { hideSlide, showSlide } = AsideEffect();
@@ -71,9 +25,9 @@ export default function Home() {
             <h1 className='title-home'>YoungFlex</h1>
           </div>
           <p className='description animate__animated animate__fadeInDown'>
-            Soy un Desarrollador Fullstack especializado en la construccion (y
-            ocasionalmente en el diseño) de increibles experiencias web, como
-            tambien un apasionado en el desarrollo de videojuegos.
+            I am a Fullstack Developer specialized in building (and occasionally
+            in design) of amazing web experiences, such as Also passionate about
+            video game development.
           </p>
           <a
             className='animate__animated animate__fadeInDown btn'
@@ -96,37 +50,23 @@ export default function Home() {
           <div className='about-content animate__animated animate__fadeIn'>
             <div className='about-content__text'>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse
-                magnam odit ex consequuntur. Eos ab quos, nam harum facere
-                cupiditate tempora nostrum inventore aspernatur quaerat
-                repudiandae molestias consequuntur. Veniam, recusandae?
-                Consectetur quam, deleniti vero nulla totam quod sint officiis
-                consequatur laboriosam quis repellat libero unde, sit molestias
-                esse blanditiis similique quia voluptatibus sequi. Accusantium
-                velit quibusdam reiciendis dolores nemo. A.
-              </p>
-
-              <p>
-                Nihil voluptas non labore nisi ipsa doloremque illo porro enim!
-                Optio inventore quis reprehenderit ab provident, adipisci ipsam
-                dolores libero maxime earum cum quo ipsum similique! Error
-                similique aperiam sequi! Lorem ipsum dolor sit amet, consectetur
-                adipisicing elit. Aut impedit, cumque ipsum porro sed ab
-                voluptatibus amet consequuntur beatae molestias eaque labore
-                eius debitis voluptatum velit ex, culpa, quidem laudantium.
+                I am a Fullstack Developer residing in Lima, Peru with 3 years
+                of experience in the software industry, I also passionate about
+                the world of videogames for which to develop videogames 🕹️ it is
+                what I do, especially more of me well..., I am a passionate
+                about the urban genre (music, clothing 🐐), of the extreme
+                sports (downhill 🚲), and as some say, a rat from the gym 💪🏽.
               </p>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
-                impedit, cumque ipsum porro sed ab voluptatibus amet
-                consequuntur beatae molestias eaque labore eius debitis
-                voluptatum velit ex, culpa, quidem laudantium.
+                Some technologies with which I have built this and other amazing
+                websites or web applications:
               </p>
               <ul>
-                <li>Javascript</li>
                 <li>TypeScript</li>
                 <li>C# & .Net</li>
+                <li>Node JS</li>
                 <li>AWS</li>
-                <li>Golang</li>
+                <li>Next JS</li>
                 <li>Sql & noSql</li>
               </ul>
             </div>
@@ -156,6 +96,35 @@ export default function Home() {
         </section>
         {/* FOURTH SECTION */}
         <section id='projects'></section>
+        {/* FIFTH SECTION */}
+        <section id='contact' className='container'>
+          <h2 className='title-chip'>
+            <span className='code-number'>04.</span> ¿Que sigue?
+          </h2>
+          <div className='contact-content'>
+            <h2>Contact me!</h2>
+            <p>
+              I am currently looking for new challenges and projects. If you are
+              interested in working with me, send me a message by clicking the
+              button below.
+            </p>
+            <a
+              href='mailto:axelskam.123@outlook.es'
+              className='btn'
+              target='_blank'
+            >
+              Hello!
+            </a>
+          </div>
+        </section>
+        {/* FOOTER */}
+        <footer>
+          <a href='https://github.com/newtyf/newtyf-portfolio' target="_blank" className='nav' rel="noopener">
+            Designed & Built by Axel Muñoz
+            <br />
+            <span>10000 y</span> | <span>221 fork</span>
+          </a>
+        </footer>
       </main>
 
       {/* menu slide */}

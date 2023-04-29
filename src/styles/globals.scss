@@ -33,6 +33,7 @@
 :root {
   --white-color: #f3f3f3;
   --gray-color: #737579;
+  --gray-color-ligth: #b2b5bd;
   --blue-color: #2185d5;
   --light-dark-color: #101010;
   --dark-color: #000000;
@@ -213,6 +214,7 @@ a {
   transition: background 400ms;
   display: inline-block;
   padding: 10px;
+  border: none;
 
   font-family: "Roboto";
   font-style: normal;
@@ -230,6 +232,8 @@ a {
 @import "./home.scss";
 @import "./about.scss";
 @import "./work.scss";
+@import "./contact.scss";
+@import "./footer.scss";
 
 @import "./social.scss";
 @import "./menuAside.scss";

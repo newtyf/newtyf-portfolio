@@ -1,0 +1,10 @@
+footer {
+  text-align: center;
+  height: 100px;
+  font-family: var(--font-sp-mono);
+  a {
+    &.nav {
+      color: var(--gray-color-ligth);
+    }
+  }
+}
