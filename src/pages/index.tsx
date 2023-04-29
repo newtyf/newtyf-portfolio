@@ -99,7 +99,7 @@ export default function Home() {
         {/* FIFTH SECTION */}
         <section id='contact' className='container'>
           <h2 className='title-chip'>
-            <span className='code-number'>04.</span> ¿Que sigue?
+            <span className='code-number'>04.</span> {"What's next?"}
           </h2>
           <div className='contact-content'>
             <h2>Contact me!</h2>
