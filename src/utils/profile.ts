@@ -51,7 +51,7 @@ export const worksSpa: job[] = [
   },
 ];
 
-export const works: job[] = [
+export const jobs: job[] = [
   {
     title: "Mirum Agency",
     description: [

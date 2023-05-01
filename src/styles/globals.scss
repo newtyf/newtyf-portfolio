@@ -70,6 +70,19 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#131313",endColorstr="#181818",GradientType=1);
   color: var(--white-color);
   font-family: "Roboto", sans-serif;
+
+  //* Scrollbar styles
+  &::-webkit-scrollbar-track {
+    background-color: var(--background-gray);
+  }
+  &::-webkit-scrollbar {
+    width: 6px;
+    background-color: var(--background-gray);
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: var(--gray-color);
+  }
 }
 
 main {
@@ -203,7 +216,6 @@ a {
     }
   }
 }
-
 
 .btn {
   cursor: pointer;
