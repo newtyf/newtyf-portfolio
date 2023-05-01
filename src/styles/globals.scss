@@ -111,6 +111,17 @@ section {
   }
 }
 
+.reveal {
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 700ms;
+
+  &.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 h2 {
   font-size: 32px;
 }

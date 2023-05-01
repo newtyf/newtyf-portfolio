@@ -2,11 +2,11 @@ import React from "react";
 
 export const Contact = () => {
   return (
-    <section id='contact' className='container'>
-      <h2 className='title-chip'>
+    <section id='contact' className='container reveal'>
+      <h2 className='title-chip reveal'>
         <span className='code-number'>04.</span> {"What's next?"}
       </h2>
-      <div className='contact-content'>
+      <div className='contact-content reveal'>
         <h2>Contact me!</h2>
         <p>
           I am currently looking for new challenges and projects. If you are

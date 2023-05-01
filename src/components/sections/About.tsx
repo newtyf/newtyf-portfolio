@@ -4,7 +4,7 @@ import React from "react";
 export const About = () => {
   return (
     <section id='about' className='container'>
-      <div className='title-section'>
+      <div className='title-section reveal'>
         <h2>
           <span className='code-number'>01.</span>{" "}
           <a href='#about' className='nav'>
@@ -14,7 +14,7 @@ export const About = () => {
         <span className='line-title'></span>
       </div>
       <div className='about-content'>
-        <div className='about-content__text'>
+        <div className='about-content__text reveal'>
           <p>
             I am a Fullstack Developer residing in Lima, Peru with 3 years of
             experience in the software industry, I also passionate about the
@@ -36,7 +36,7 @@ export const About = () => {
             <li>Sql & noSql</li>
           </ul>
         </div>
-        <div className='about-content__image'>
+        <div className='about-content__image reveal'>
           <div className='content-image'>
             <Image
               width={240}

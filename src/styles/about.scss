@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  // margin-bottom: 200px;
 
   .about-content {
     display: flex;
@@ -73,18 +72,20 @@
           var(--blue-color) 25px 25px;
         transition: all 400ms;
         position: relative;
-        filter: grayscale(100%);
 
         &:hover {
           box-shadow: var(--light-dark-color) 15px 15px 0px -4px,
             var(--blue-color) 15px 15px;
-          filter: none;
+          img {
+            filter: none;
+          }
         }
 
         img {
           width: 100%;
           height: 100%;
           border-radius: inherit;
+          filter: grayscale(100%);
           // -webkit-filter: unquote("grayscale(100%)");
           // filter: unquote("grayscale(100%)");
         }

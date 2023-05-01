@@ -5,6 +5,7 @@ import { About, Contact, Home, Work } from "@/components/sections";
 import { AsideEffect } from "@/hooks/AsideEffect";
 import { menu, jobs, social, mail, projects } from "@/utils/profile";
 import { Projects } from "@/components/sections/Projects";
+import { ShowContentScroll } from "@/hooks/ShowContentScroll";
 
 export default function Index({
   stargazers_count,
@@ -14,6 +15,7 @@ export default function Index({
   followers: number;
 }) {
   const { hideSlide, showSlide } = AsideEffect();
+  ShowContentScroll()
 
   return (
     <>

@@ -6,7 +6,7 @@ export const Home = () => {
       <h2 className='subtitle-home animate__animated animate__fadeInDown animate__slow'>
         I build things for the web.
       </h2>
-      <div className='typewriter'>
+      <div className='typewriter animate__animated animate__fadeInDown'>
         <h1 className='title-home'>YoungFlex</h1>
       </div>
       <p className='description animate__animated animate__fadeInDown'>

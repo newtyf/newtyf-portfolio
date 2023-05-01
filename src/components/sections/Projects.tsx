@@ -1,11 +1,10 @@
 import { project } from "@/types";
 import Image from "next/image";
-import React from "react";
 
 export const Projects = ({ projects }: { projects: project[] }) => {
   return (
     <section id='projects' className='container'>
-      <div className='title-section'>
+      <div className='title-section reveal'>
         <h2>
           <span className='code-number'>03. </span>
           <a href='#about' className='nav'>
@@ -17,7 +16,7 @@ export const Projects = ({ projects }: { projects: project[] }) => {
       {projects.map((project, index) => (
         <div
           className={
-            index % 2 === 0 ? "projects-content rigth" : "projects-content"
+            index % 2 === 0 ? "projects-content reveal rigth" : "projects-content reveal"
           }
           key={project.liveSite}
         >
