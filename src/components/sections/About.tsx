@@ -16,7 +16,7 @@ export const About = () => {
       <div className='about-content'>
         <div className='about-content__text reveal'>
           <p>
-            I am a Fullstack Developer residing in Lima, Peru with 3 years of
+            Hi my name is Axel Muñoz, i am a Fullstack Developer residing in Lima, Peru with 3 years of
             experience in the software industry, I also passionate about the
             world of videogames for which to develop videogames 🕹️ it is what I
             do, especially more of me well..., I am a passionate about the urban
