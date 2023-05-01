@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Navbar, AsideSlide } from "@/components/";
 import { About, Contact, Home, Work } from "@/components/sections";
 
