@@ -173,6 +173,36 @@ a {
   }
 }
 
+ul {
+  &.tags {
+    display: flex;
+    list-style: none;
+    li {
+      color: var(--gray-color-ligth);
+      font-size: 14px;
+      font-family: var(--font-fira-code);
+      text-transform: capitalize;
+      margin-right: 20px;
+    }
+  }
+  &.link-icons {
+    display: flex;
+    list-style: none;
+    li {
+      margin-right: 10px;
+      a.icon {
+        font-size: 20px;
+        color: var(--white-color);
+
+        &:hover {
+          color: var(--blue-color);
+          transform: translateY(-10px);
+        }
+      }
+    }
+  }
+}
+
 .title-section {
   display: flex;
   position: relative;
@@ -244,6 +274,7 @@ a {
 @import "./home.scss";
 @import "./about.scss";
 @import "./work.scss";
+@import "./projects.scss";
 @import "./contact.scss";
 @import "./footer.scss";
 

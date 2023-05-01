@@ -20,4 +20,14 @@ type job = {
   end: string
 }
 
-export {option, job};
+type project = {
+  title: string,
+  description: string,
+  tags: string[],
+  image: string,
+  github: string,
+  liveSite: string
+}
+
+
+export {option, job, project};

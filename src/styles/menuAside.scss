@@ -32,13 +32,10 @@ aside {
       margin: 0 auto;
       font-size: 20px;
       text-align: center;
-      list-style: decimal-leading-zero inside;
       color: var(--blue-color);
+      list-style: none;
 
       li {
-        &:last-child {
-          list-style-type: none;
-        }
         margin-bottom: 30px;
         font-family: var(--font-sp-mono);
       }

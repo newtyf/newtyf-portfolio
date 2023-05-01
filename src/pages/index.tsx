@@ -1,10 +1,18 @@
+import Image from "next/image";
 import { Navbar, AsideSlide } from "@/components/";
 import { About, Contact, Home, Work } from "@/components/sections";
 
 import { AsideEffect } from "@/hooks/AsideEffect";
-import { menu, jobs, social, mail } from "@/utils/profile";
+import { menu, jobs, social, mail, projects } from "@/utils/profile";
+import { Projects } from "@/components/sections/Projects";
 
-export default function Index() {
+export default function Index({
+  stargazers_count,
+  followers,
+}: {
+  stargazers_count: number;
+  followers: number;
+}) {
   const { hideSlide, showSlide } = AsideEffect();
 
   return (
@@ -20,9 +28,7 @@ export default function Index() {
         {/* THIRD SECTION */}
         <Work listJobs={jobs} />
         {/* FOURTH SECTION */}
-        <section id='projects' className="container">
-          {/* <h2>daaaaaaa</h2> */}
-        </section>
+        <Projects projects={projects} />
         {/* FIFTH SECTION */}
         <Contact />
         {/* FOOTER */}
@@ -35,7 +41,13 @@ export default function Index() {
           >
             Designed & Built by Axel Muñoz
             <br />
-            <span>10000 y</span> | <span>221 fork</span>
+            <span>
+              {stargazers_count} <i className='bi bi-stars'></i>
+            </span>{" "}
+            |{" "}
+            <span>
+              {followers} <i className='bi bi-github'></i>{" "}
+            </span>
           </a>
         </footer>
       </main>
@@ -73,4 +85,18 @@ export default function Index() {
       </div>
     </>
   );
+}
+
+export async function getServerSideProps() {
+  const res = await fetch(
+    `https://api.github.com/repos/newtyf/newtyf-portfolio`
+  );
+  const dataRepo = await res.json();
+
+  const resUser = await fetch(`https://api.github.com/users/newtyf`);
+  const dataUser = await resUser.json();
+
+  const { stargazers_count } = dataRepo;
+  const { followers } = dataUser;
+  return { props: { stargazers_count, followers } };
 }
