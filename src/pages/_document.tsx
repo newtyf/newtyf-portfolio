@@ -26,6 +26,10 @@ export default function Document() {
           href='https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap'
           rel='stylesheet'
         />
+        <meta
+          name='google-site-verification'
+          content='oD6rxybfXL3VSOYH0xpWkP-d2SAFPEGaepElLIBO_lI'
+        />
       </Head>
       <body>
         <Main />
