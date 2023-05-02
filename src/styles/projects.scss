@@ -1,7 +1,9 @@
 #projects {
   .title-section {
     .line-title {
-      max-width: 90px;
+      @include mobile {
+        max-width: 50px;
+      }
     }
   }
 
