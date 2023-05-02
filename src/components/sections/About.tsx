@@ -41,7 +41,7 @@ export const About = () => {
             <Image
               width={240}
               height={240}
-              src={"/profile.jpg"}
+              src={"/profile.webp"}
               alt='profile-photo'
             />
           </div>

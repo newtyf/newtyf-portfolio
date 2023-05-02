@@ -12,11 +12,11 @@ export const Navbar = ({
   NavBarEffect();
   return (
     <nav id='navbar'>
-      <h2 className='animate__animated'>
+      <h1 className='animate__animated'>
         <Link href={"#home"} scroll={false}>
           Newtyf
         </Link>
-      </h2>
+      </h1>
 
       <ol>
         {menu.map((item, index) => (

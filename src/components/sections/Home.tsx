@@ -7,7 +7,7 @@ export const Home = () => {
         I build things for the web.
       </h2>
       <div className='typewriter animate__animated animate__fadeInDown'>
-        <h1 className='title-home'>YoungFlex</h1>
+        <h2 className='title-home'>YoungFlex</h2>
       </div>
       <p className='description animate__animated animate__fadeInDown'>
         I am a Fullstack Developer specialized in building (and occasionally in

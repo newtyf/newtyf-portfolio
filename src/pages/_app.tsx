@@ -10,7 +10,8 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Newt Yf</title>
+        <title>Newtyf</title>
+        <link rel="icon" href="/favicon.ico"></link>
       </Head>
       <Component {...pageProps} />
       <Script

@@ -11,12 +11,12 @@
 
   @include mobile {
     padding: 20px 20px;
-    h2 {
+    h1 {
       font-size: 25px;
     }
   }
 
-  h2 {
+  h1 {
     animation-name: fadeInDown;
     animation-duration: 2s;
     transition: 300ms;

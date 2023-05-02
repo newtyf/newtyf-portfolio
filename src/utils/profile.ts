@@ -86,7 +86,7 @@ export const projects: project[] = [
     description:
       "The classic game of rock, paper or scissors, comes to the web and for free, play against the PC or against your friends!",
     github: "https://github.com/newtyf/rock-paper-scissors",
-    image: "/rpsa.png",
+    image: "/rpsa.webp",
     liveSite: "https://rps.newtyf.com/",
     tags: ["React", "Socket", "router", "vite", "Mongo DB"],
   },
@@ -95,7 +95,7 @@ export const projects: project[] = [
     description:
       "Web application to organize your time and increase your productivity using the Pomodoro!",
     github: "https://github.com/newtyf/Pomodoro-by-newt",
-    image: "/pomodoro.png",
+    image: "/pomodoro.webp",
     liveSite: "https://newtpomofocus.netlify.app/",
     tags: ["Vite", "Pinia", "VueJS", "Scss"],
   },
