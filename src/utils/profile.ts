@@ -91,6 +91,15 @@ export const projects: project[] = [
     tags: ["React", "Socket", "router", "vite", "Mongo DB"],
   },
   {
+    title: "JUAN BOT",
+    description:
+      "Discord bot for play music of youtube or sporitfy in your Discord server!",
+    github: "https://github.com/newtyf/Newt-Bot",
+    image: "/discord.webp",
+    // liveSite: "https://github.com/newtyf/Newt-Bot",
+    tags: ["Node", "DiscordJS", "Discord-player"],
+  },
+  {
     title: "Pomodoro App",
     description:
       "Web application to organize your time and increase your productivity using the Pomodoro!",

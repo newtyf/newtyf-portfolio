@@ -26,7 +26,7 @@ type project = {
   tags: string[],
   image: string,
   github: string,
-  liveSite: string
+  liveSite?: string
 }
 
 
