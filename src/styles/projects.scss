@@ -10,12 +10,14 @@
   .projects-content {
     display: flex;
     margin-top: 100px;
+    min-height: 400px;
     position: relative;
     text-align: left;
     align-items: center;
     @include mobile {
       margin-top: 30px;
       padding: 20px;
+      border: 1px solid var(--blue-color);
     }
 
     .projects-content__text {
@@ -58,7 +60,6 @@
         }
       }
       ul {
-        margin-top: 15px;
         flex-wrap: wrap;
         &.tags {
           display: flex;
@@ -68,12 +69,19 @@
             font-size: 14px;
             font-family: var(--font-fira-code);
             text-transform: capitalize;
-            margin-right: 20px;
+            margin-top: 10px;
+            margin-right: 8px;
+            padding: 5px 10px;
+            border-radius: 10px;
+            background-color: var(--light-dark-color);
           }
         }
         &.link-icons {
           display: flex;
           list-style: none;
+          margin-top: 15px;
+          margin-left: 10px;
+          margin-right: 10px;
           li {
             margin-right: 10px;
             a.icon {

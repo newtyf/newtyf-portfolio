@@ -88,7 +88,7 @@ export const projects: project[] = [
     github: "https://github.com/newtyf/rock-paper-scissors",
     image: "/rpsa.webp",
     liveSite: "https://rps.newtyf.com/",
-    tags: ["React", "Socket", "router", "vite", "Mongo DB"],
+    tags: ["React", "Vite", "TypeScript", "Signal R", "Mongo DB"],
   },
   {
     title: "JUAN BOT",
