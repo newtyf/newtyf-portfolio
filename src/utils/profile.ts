@@ -84,11 +84,11 @@ export const projects: project[] = [
   {
     title: "RPS GAME",
     description:
-      "The classic game of rock, paper or scissors, comes to the web and for free, play against the PC or against your friends!",
+      "The classic game of rock paper scissors comes to the web, play against the computer or against your friends!",
     github: "https://github.com/newtyf/rock-paper-scissors",
     image: "/rpsa.webp",
     liveSite: "https://rps.newtyf.com/",
-    tags: ["React", "Vite", "TypeScript", "Signal R", "Mongo DB"],
+    tags: ["React", "Vite", "TypeScript", "Signal R", "Mongo DB", "Real-time"],
   },
   {
     title: "JUAN BOT",
