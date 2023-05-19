@@ -1,5 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import Script from "next/script";
+// import Script from "next/script";
 
 const gtag: string = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`;
 
@@ -35,17 +35,17 @@ export default function Document() {
         />
         {process.env.NODE_ENV === "production" && (
           <>
-            <Script async src={gtag}></Script>
-            <Script
+            <script async src={gtag}></script>
+            <script
               id='google-analytics'
               dangerouslySetInnerHTML={{
                 __html: `window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', ${process.env.NEXT_PUBLIC_GA_ID});`,
+                function gtag(){dataLayer.push(arguments)};
+                gtag('js', new Date());
+                gtag('config', "${process.env.NEXT_PUBLIC_GA_ID}");
+                console.log("Google analytics charged succesfull")`,
               }}
-            ></Script>
+            ></script>
           </>
         )}
       </Head>
