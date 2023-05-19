@@ -25,6 +25,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "@types/gtag.js": "^0.0.12",
     "sass": "^1.62.0"
   }
 }

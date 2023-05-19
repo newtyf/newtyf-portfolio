@@ -1,4 +1,7 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import Script from "next/script";
+
+const gtag: string = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`;
 
 export default function Document() {
   return (
@@ -30,6 +33,21 @@ export default function Document() {
           name='google-site-verification'
           content='oD6rxybfXL3VSOYH0xpWkP-d2SAFPEGaepElLIBO_lI'
         />
+        {process.env.NODE_ENV === "production" && (
+          <>
+            <Script async src={gtag}></Script>
+            <Script
+              id='google-analytics'
+              dangerouslySetInnerHTML={{
+                __html: `window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', ${process.env.NEXT_PUBLIC_GA_ID});`,
+              }}
+            ></Script>
+          </>
+        )}
       </Head>
       <body>
         <Main />
