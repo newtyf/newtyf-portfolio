@@ -18,7 +18,7 @@
       animation: typing 2.5s steps(30, end), blink-caret .75s step-end infinite;
 
       @include tablet {
-        font-size: 100px;
+        font-size: 93px;
         margin-bottom: 10px;
         margin-top: 0;
       }
@@ -37,7 +37,7 @@
     color: var(--gray-color);
     font-size: 42px;
     @include tablet {
-      font-size: 20px;
+      font-size: 24px;
     }
   }
 
@@ -52,7 +52,7 @@
 
     @include tablet {
       margin-top: 0;
-      font-size: 16px;
+      font-size: 18px;
     }
 
     @include mobile {

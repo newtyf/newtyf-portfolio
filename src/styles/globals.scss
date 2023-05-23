@@ -19,7 +19,7 @@
 }
 
 @mixin tablet {
-  @media (max-width: 1000px) {
+  @media (max-width: 1069px) {
     @content;
   }
 }
@@ -219,9 +219,6 @@ a {
     margin-left: 20px;
     margin-top: 4px;
     background-color: var(--gray-color);
-    @include tablet {
-      max-width: 140px;
-    }
     @include s-mobile {
       max-width: 100px;
     }
