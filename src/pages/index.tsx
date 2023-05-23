@@ -97,6 +97,11 @@ export async function getServerSideProps() {
   const resUser = await fetch(`https://api.github.com/users/newtyf`);
   const dataUser = await resUser.json();
 
+  const resRepos = await fetch(`https://api.github.com/users/newtyf/repos?per_page=9&sort=pushed`);
+  const dataRes = await resRepos.json();
+
+  console.log(dataRes[0].name);
+
   const { stargazers_count } = dataRepo;
   const { followers } = dataUser;
   return { props: { stargazers_count, followers } };

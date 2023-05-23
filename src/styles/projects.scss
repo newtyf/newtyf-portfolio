@@ -148,4 +148,63 @@
       }
     }
   }
+
+  .extra-projects {
+    margin-top: 100px;
+
+    .title-chip {
+      font-size: 24px;
+      font-family: var(--font-fira-code);
+      margin-bottom: 50px;
+    }
+    .project {
+      border: 1px solid var(--blue-color);
+      height: 400px;
+      padding: 30px;
+      transition: transform 400ms;
+      &:hover {
+        transform: translateY(-10px);
+        .project-content {
+          h3 {
+            color: var(--blue-color);
+          }
+        }
+      }
+      .project-title {
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .list-icons {
+          i {
+            font-size: 20px;
+            margin-right: 10px;
+            color: var(--gray-color-ligth);
+          }
+        }
+        i {
+          font-size: 40px;
+        }
+      }
+      .project-content {
+        h3 {
+          font-size: 32px;
+          font-family: var(--font-roboto);
+          color: var(--gray-color-ligth);
+          word-wrap: break-word;
+          transition: color 400ms;
+          // ? for dots at the of the text
+          // overflow: hidden;
+          // text-overflow: ellipsis;
+        }
+        p {
+          margin-top: 10px;
+          font-size: 14px;
+          color: var(--white-color);
+          font-family: var(--font-sp-mono);
+        }
+      }
+    }
+  }
 }
